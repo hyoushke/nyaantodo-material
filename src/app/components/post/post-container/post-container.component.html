@@ -1,1 +1,51 @@
-<p>post-container works!</p>
+<div class="alert alert-success" role="alert">
+    Message : <strong>{{ message }}</strong>
+    <br />
+    <br />
+    Navigation: <strong>{{ navigation }}</strong>
+    <br />
+    <br />
+    Counter: <strong>{{ counter }}</strong>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <app-todo-navigation (navigationEvent)="recieveNavigationEvent($event)"  ></app-todo-navigation>
+    </div>
+    <div class="col">
+
+        <div *ngIf="isLoading==true" class="row">
+            <div class="col" >
+              NOW LOADING....
+            </div>
+        </div>
+
+        <div *ngIf="navigation=='TDO_LIST'" class="row">
+          <div class="col">
+            <app-todo-list [todos]="todos"></app-todo-list>
+          </div>
+        </div>
+
+        <div *ngIf="navigation=='POS_FORM'" class="row">
+            <div class="col" >
+              <app-todo-form (todoFormEvent)="recieveTodoFormEvent($event)"></app-todo-form>
+            </div>
+        </div>
+
+
+
+
+
+        <div *ngIf="navigation=='TDO_REPORTS'" class="row">
+        </div>
+
+        <div *ngIf="navigation=='TDO_SUMMARY'" class="row">
+        </div>
+
+        <div *ngIf="navigation=='TDO_TABLE'" class="row">
+        </div>
+
+
+
+    </div>
+</div>

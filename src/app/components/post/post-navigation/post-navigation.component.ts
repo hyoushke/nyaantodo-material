@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-post-navigation',
@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostNavigationComponent implements OnInit {
 
+  public message = '';
+  public counter: number = 0;
+
+  @Output() navigationEvent = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  onClickNavigateItem(postNavigation: string){
+
+    const data = {message: 'broadcast from navigation child',
+                counter: this.counter,
+                navigation: postNavigation };
+    this.counter++;
+    this.navigationEvent.emit(data);
+
+  }
+
 
 }
