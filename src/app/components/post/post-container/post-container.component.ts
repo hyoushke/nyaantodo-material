@@ -1,6 +1,6 @@
 import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import { TodosService } from 'src/app/services/todos.service';
-import { IPost } from 'src/app/interface/IPost';
+import { PostService } from 'src/app/services/post/post.service';
+import { IPost } from 'src/app/models/post.interface';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -11,16 +11,16 @@ import { Observable } from 'rxjs/Observable';
 export class PostContainerComponent implements OnInit {
 
  //public todos$:Observable<IPost[]>;
- public todos:IPost[];
+ public posts: IPost[];
 
- public child:string;
- public counter:number;
- public message:string;
- public navigation:string;
- public toaster:string;
- public isLoading:boolean = false;
+ public child: string;
+ public counter: number;
+ public message: string;
+ public navigation: string;
+ public toaster: string;
+ public isLoading: boolean = false;
 
- public todoContainerMessage:string;
+ public todoContainerMessage: string;
 
  public todo_data = null;
  public todo_action = null;
@@ -29,27 +29,21 @@ export class PostContainerComponent implements OnInit {
  public todo_summary = null;
 
 
- constructor(private _todosService:TodosService ) { }
+ constructor(private _postService: PostService ) { }
 
  ngOnInit(): void {
     console.log('I have been Initialize');
-    this.getTodos();
-    //this.todos$ = this._todosService.getTodos();
-    this._todosService.postsSource.subscribe(todos => this.todos = todos);
+    this.getPosts();
+    this._postService.postsSource.subscribe(posts => this.posts = posts);
 
  }
 
- getTodos(): void {
-   this._todosService.getTodos().subscribe(todos => this.todos = todos);
+ getPosts(): void {
+   this._postService.getPosts().subscribe(posts => this.posts = posts);
 
  }
 
 
-
-
- //handles child component events data sharing
- //we can rename it all as
- //onHandlesComponentEvent in the future..
  recieveNavigationEvent($event): void{
 
    this.isLoading = true;
@@ -79,7 +73,7 @@ export class PostContainerComponent implements OnInit {
    alert('New Todo Successfully Created');
 
    this.navigation = 'TDO_LIST';
-   this.getTodos();
+   this.getPosts();
  }
 
  recieveTodoReactiveFormEvent($event): void{
@@ -92,7 +86,7 @@ export class PostContainerComponent implements OnInit {
    alert('New Todo Reactive Successfully Created');
 
    this.navigation = 'TDO_LIST';
-   this.getTodos();
+   this.getPosts();
  }
 
  recieveTodoReactiveFormv2Event($event): void{
@@ -105,7 +99,7 @@ export class PostContainerComponent implements OnInit {
    alert('New Todo Reactive Successfully Created');
 
    this.navigation = 'TDO_LIST';
-   this.getTodos();
+   this.getPosts();
  }
 
 }
