@@ -34,6 +34,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { ContentContainerComponent } from './components/layout/content-container/content-container.component';
 import { ContentNavigationComponent } from './components/layout/content-navigation/content-navigation.component';
+import { ContentContentComponent } from './components/layout/content-content/content-content.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ContentNavigationComponent } from './components/layout/content-navigati
     HeaderComponent,
     FooterComponent,
     ContentContainerComponent,
-    ContentNavigationComponent
+    ContentNavigationComponent,
+    ContentContentComponent
   ],
   imports: [
     BrowserModule,
