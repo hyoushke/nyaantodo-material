@@ -35,6 +35,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
 import { ContentContainerComponent } from './components/layout/content-container/content-container.component';
 import { ContentNavigationComponent } from './components/layout/content-navigation/content-navigation.component';
 import { ContentContentComponent } from './components/layout/content-content/content-content.component';
+import { DemoTypographyComponent } from './components/demo/demo-typography/demo-typography.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ContentContentComponent } from './components/layout/content-content/con
     FooterComponent,
     ContentContainerComponent,
     ContentNavigationComponent,
-    ContentContentComponent
+    ContentContentComponent,
+    DemoTypographyComponent
   ],
   imports: [
     BrowserModule,
