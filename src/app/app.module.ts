@@ -41,6 +41,7 @@ import { PostContainerComponent } from './components/post/post-container/post-co
 import { PostFormComponent } from './components/post/post-form/post-form.component';
 import { PostListComponent } from './components/post/post-list/post-list.component';
 import { PostListItemComponent } from './components/post/post-list-item/post-list-item.component';
+import { LoginComponent } from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { PostListItemComponent } from './components/post/post-list-item/post-lis
     PostContainerComponent,
     PostFormComponent,
     PostListComponent,
-    PostListItemComponent
+    PostListItemComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
