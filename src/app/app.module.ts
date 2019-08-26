@@ -30,6 +30,7 @@ import { DemoTreeComponent } from './components/demo/demo-tree/demo-tree.compone
 import { MatTreeModule } from '@angular/material/tree';
 import { DemoDragdropComponent } from './components/demo/demo-dragdrop/demo-dragdrop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HeaderComponent } from './components/layout/header/header.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     DemoTableComponent,
     DemoDashboardComponent,
     DemoTreeComponent,
-    DemoDragdropComponent
+    DemoDragdropComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
