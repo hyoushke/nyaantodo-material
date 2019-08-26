@@ -1,1 +1,18 @@
-<p>header works!</p>
+<mat-toolbar color="primary" role="heading">
+    <button type="button" aria-label="nyaantagram" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+    </button>
+
+    <span>Nyaantagram</span>
+    <div>
+            <a href="#" mat-button>Products</a>
+            <a href="#" mat-button>Cagegories</a>
+            <a href="#" mat-button>Posts</a>
+            <a href="#" mat-button>Dashboards</a>
+            <a href="#" mat-button>Menu Item 5</a>
+            <a href="#" mat-button>Menu Item 6</a>
+    </div>
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+</mat-toolbar>
