@@ -37,6 +37,7 @@ import { ContentNavigationComponent } from './components/layout/content-navigati
 import { ContentContentComponent } from './components/layout/content-content/content-content.component';
 import { DemoTypographyComponent } from './components/demo/demo-typography/demo-typography.component';
 import { PostNavigationComponent } from './components/post/post-navigation/post-navigation.component';
+import { PostContainerComponent } from './components/post/post-container/post-container.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { PostNavigationComponent } from './components/post/post-navigation/post-
     ContentNavigationComponent,
     ContentContentComponent,
     DemoTypographyComponent,
-    PostNavigationComponent
+    PostNavigationComponent,
+    PostContainerComponent
   ],
   imports: [
     BrowserModule,
