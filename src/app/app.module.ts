@@ -31,6 +31,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { DemoDragdropComponent } from './components/demo/demo-dragdrop/demo-dragdrop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { HeaderComponent } from './components/layout/header/header.component';
     DemoDashboardComponent,
     DemoTreeComponent,
     DemoDragdropComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
