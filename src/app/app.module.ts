@@ -42,6 +42,7 @@ import { PostFormComponent } from './components/post/post-form/post-form.compone
 import { PostListComponent } from './components/post/post-list/post-list.component';
 import { PostListItemComponent } from './components/post/post-list-item/post-list-item.component';
 import { LoginComponent } from './components/login/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { LoginComponent } from './components/login/login/login.component';
     PostFormComponent,
     PostListComponent,
     PostListItemComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
