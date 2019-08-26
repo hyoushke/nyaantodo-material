@@ -10,7 +10,6 @@ import { Observable } from 'rxjs/Observable';
 })
 export class PostContainerComponent implements OnInit {
 
- //public todos$:Observable<IPost[]>;
  public posts: IPost[];
 
  public child: string;
@@ -22,11 +21,11 @@ export class PostContainerComponent implements OnInit {
 
  public todoContainerMessage: string;
 
- public todo_data = null;
- public todo_action = null;
- public todo_notification = null;
- public todo_sidebar = null;
- public todo_summary = null;
+ public post_data = null;
+ public post_action = null;
+ public post_notification = null;
+ public post_sidebar = null;
+ public post_summary = null;
 
 
  constructor(private _postService: PostService ) { }
@@ -44,14 +43,14 @@ export class PostContainerComponent implements OnInit {
  }
 
 
- recieveNavigationEvent($event): void{
+ recieveNavigationEvent($event): void {
 
    this.isLoading = true;
-   this.navigation = 'TDO_LOADING';
+   this.navigation = 'POS_LOADING';
 
-   setTimeout( ()=>{
+   setTimeout( () => {
 
-     this.child = 'Todo Navigation';
+     this.child = 'Post Navigation';
      this.navigation = $event.navigation;
      this.counter = $event.counter;
      this.message = $event.message;
@@ -63,42 +62,16 @@ export class PostContainerComponent implements OnInit {
 
  }
 
- recieveTodoFormEvent($event): void{
-   this.child = 'Todo Form';
+ recievePostFormEvent($event): void {
+   this.child = 'Post Form';
    this.navigation = $event.navigation;
    this.counter = $event.counter;
    this.message = $event.message;
    this.toaster = 'Toasted Notification';
 
-   alert('New Todo Successfully Created');
+   alert('New Post Successfully Created');
 
-   this.navigation = 'TDO_LIST';
-   this.getPosts();
- }
-
- recieveTodoReactiveFormEvent($event): void{
-   this.child = 'Todo Reactive Form';
-   this.navigation = $event.navigation;
-   this.counter = $event.counter;
-   this.message = $event.message;
-   this.toaster = 'Toasted Notification';
-
-   alert('New Todo Reactive Successfully Created');
-
-   this.navigation = 'TDO_LIST';
-   this.getPosts();
- }
-
- recieveTodoReactiveFormv2Event($event): void{
-   this.child = 'Todo Reactive v2 Form';
-   this.navigation = $event.navigation;
-   this.counter = $event.counter;
-   this.message = $event.message;
-   this.toaster = 'Toasted Notification';
-
-   alert('New Todo Reactive Successfully Created');
-
-   this.navigation = 'TDO_LIST';
+   this.navigation = 'POS_LIST';
    this.getPosts();
  }
 

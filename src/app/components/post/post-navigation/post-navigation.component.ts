@@ -17,7 +17,7 @@ export class PostNavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickNavigateItem(postNavigation: string){
+  onClickNavigateItem(postNavigation: string) {
 
     const data = {message: 'broadcast from navigation child',
                 counter: this.counter,

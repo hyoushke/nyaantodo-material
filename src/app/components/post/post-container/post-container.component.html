@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="col-3">
-        <app-todo-navigation (navigationEvent)="recieveNavigationEvent($event)"  ></app-todo-navigation>
+        <app-post-navigation (navigationEvent)="recieveNavigationEvent($event)"  ></app-post-navigation>
     </div>
     <div class="col">
 
@@ -22,13 +22,13 @@
 
         <div *ngIf="navigation=='TDO_LIST'" class="row">
           <div class="col">
-            <app-todo-list [todos]="todos"></app-todo-list>
+            <app-post-list [posts]="posts"></app-post-list>
           </div>
         </div>
 
         <div *ngIf="navigation=='POS_FORM'" class="row">
             <div class="col" >
-              <app-todo-form (todoFormEvent)="recieveTodoFormEvent($event)"></app-todo-form>
+              <app-post-form (todoFormEvent)="recieveTodoFormEvent($event)"></app-post-form>
             </div>
         </div>
 
