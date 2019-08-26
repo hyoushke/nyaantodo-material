@@ -40,6 +40,7 @@ import { PostNavigationComponent } from './components/post/post-navigation/post-
 import { PostContainerComponent } from './components/post/post-container/post-container.component';
 import { PostFormComponent } from './components/post/post-form/post-form.component';
 import { PostListComponent } from './components/post/post-list/post-list.component';
+import { PostListItemComponent } from './components/post/post-list-item/post-list-item.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { PostListComponent } from './components/post/post-list/post-list.compone
     PostNavigationComponent,
     PostContainerComponent,
     PostFormComponent,
-    PostListComponent
+    PostListComponent,
+    PostListItemComponent
   ],
   imports: [
     BrowserModule,
