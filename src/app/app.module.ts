@@ -44,6 +44,9 @@ import { PostListItemComponent } from './components/post/post-list-item/post-lis
 import { LoginComponent } from './components/login/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+
+import {routing} from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +71,7 @@ import { RegisterComponent } from './components/register/register.component';
     RegisterComponent
   ],
   imports: [
+    routing,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

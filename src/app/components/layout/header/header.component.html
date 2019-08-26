@@ -13,12 +13,12 @@
             -->
 
             <mat-icon matBadge="22" matBadgeSize="large" matBadgeColor="accent">email</mat-icon>
-            <a href="#" mat-button><mat-icon>favorite</mat-icon></a>
-            <a href="#" mat-button><mat-icon>grade</mat-icon></a>
-            <a href="#" mat-button><mat-icon>email</mat-icon></a>
-            <a href="#" mat-button><mat-icon>home</mat-icon></a>
-            <a href="#" mat-button><mat-icon>dashboard</mat-icon></a>
-            <a href="#" mat-button><mat-icon>face</mat-icon></a>
+            <a routerLink="/post" mat-button><mat-icon>favorite</mat-icon></a>
+            <a routerLink="/register" mat-button><mat-icon>grade</mat-icon></a>
+            <a routerLink="/login" mat-button><mat-icon>email</mat-icon></a>
+            <a routerLink="/" mat-button><mat-icon>home</mat-icon></a>
+            <a routerLink="/" mat-button><mat-icon>dashboard</mat-icon></a>
+            <a routerLink="/" mat-button><mat-icon>face</mat-icon></a>
     </div>
     <button mat-icon-button [mat-menu-trigger-for]="menu">
       <mat-icon>more_vert</mat-icon>
@@ -44,11 +44,6 @@
    </mat-nav-list>
 
 
-   <mat-nav-list style="width: 100%;">
-      <button mat-list-item>Link 1</button>
-      <button mat-list-item>Link 2</button>
-      <button mat-list-item>Link 3</button>
-    </mat-nav-list>
 
 </mat-grid-tile>
 

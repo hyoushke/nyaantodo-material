@@ -1,15 +1,13 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {TodoContainerComponent} from './components/todo/todo-container/todo-container.component';
-import {PostComponent} from './components/post/post/post-container/post-container';
+import {PostContainerComponent} from './components/post/post-container/post-container.component';
 import {LoginComponent} from './components/login/login/login.component';
-import {RegisterComponent} from './components/register/register/register.component';
+import {RegisterComponent} from './components/register/register.component';
 
 const appRoutes: Routes = [
 
-        {path: 'todo', component: TodoContainerComponent  },
-        {path: 'post', component: PostComponent  },
+        {path: 'post', component: PostContainerComponent  },
         {path: 'login', component: LoginComponent  },
         {path: 'register', component: RegisterComponent  },
 
