@@ -1,27 +1,7 @@
-<mat-toolbar color="primary" role="heading">
+<app-header>
 
-    <button type="button" aria-label="nyaantagram" mat-icon-button>
-    <mat-icon>menu</mat-icon>
-    </button>
+</app-header>
 
-    <span>Nyaantagram</span>
-
-    <div>
-
-
-            <a href="#" mat-button>Products</a>
-            <a href="#" mat-button>Cagegories</a>
-            <a href="#" mat-button>Posts</a>
-            <a href="#" mat-button>Dashboards</a>
-            <a href="#" mat-button>Menu Item 5</a>
-            <a href="#" mat-button>Menu Item 6</a>
-
-    </div>
-
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-  </mat-toolbar>
   <mat-grid-list cols="4" rowHeight="100px">
       <mat-grid-tile
           *ngFor="let tile of tiles"
