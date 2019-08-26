@@ -39,6 +39,7 @@ import { DemoTypographyComponent } from './components/demo/demo-typography/demo-
 import { PostNavigationComponent } from './components/post/post-navigation/post-navigation.component';
 import { PostContainerComponent } from './components/post/post-container/post-container.component';
 import { PostFormComponent } from './components/post/post-form/post-form.component';
+import { PostListComponent } from './components/post/post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { PostFormComponent } from './components/post/post-form/post-form.compone
     DemoTypographyComponent,
     PostNavigationComponent,
     PostContainerComponent,
-    PostFormComponent
+    PostFormComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
