@@ -1,15 +1,19 @@
-<div class="card" style="width: 16rem;">
-    <img class="card-img-top" src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{postitem.title}}</h5>
-      <p class="card-text">{{postitem.content}}</p>
-
-      <button class="btn btn-primary">Edit</button>
-      <button class="btn btn-primary">Remove</button>
-      <button class="btn btn-primary">Set Enable</button>
-      <button class="btn btn-primary">Set Color</button>
-
-    </div>
-  </div>
-
-
+  <mat-card class="example-card" style="width: 16rem;">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{postitem.title}}</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+            {{postitem.content}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Edit</button>
+        <button mat-button>Remove</button>
+        <button mat-button>Set Enable</button>
+        <button mat-button>Set Color</button>
+      </mat-card-actions>
+    </mat-card>

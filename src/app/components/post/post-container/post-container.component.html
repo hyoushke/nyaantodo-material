@@ -1,51 +1,74 @@
-<div class="alert alert-success" role="alert">
-    Message : <strong>{{ message }}</strong>
-    <br />
-    <br />
-    Navigation: <strong>{{ navigation }}</strong>
-    <br />
-    <br />
-    Counter: <strong>{{ counter }}</strong>
-</div>
 
-<div class="row">
-    <div class="col-3">
-        <app-post-navigation (navigationEvent)="recieveNavigationEvent($event)"  ></app-post-navigation>
-    </div>
-    <div class="col">
+<mat-grid-list cols="12">
+    <mat-grid-tile colspan="12">
+        Message : <strong>{{ message }}</strong>
+        <br />
+        <br />
+        Navigation: <strong>{{ navigation }}</strong>
+        <br />
+        <br />
+        Counter: <strong>{{ counter }}</strong>
+    </mat-grid-tile>
 
-        <div *ngIf="isLoading==true" class="row">
-            <div class="col" >
-              NOW LOADING....
+    <mat-grid-tile colspan="3" style="height: 800px;">
+        <app-post-navigation style="width: 100%;" (onEmitNavigationEvent)="recieveNavigationEvent($event)"  ></app-post-navigation>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="9" style="height: 800px;">
+
+
+    <mat-tab-group style="width: 100%;">
+
+
+        <mat-tab label="First">
+            <div *ngIf="isLoading==true" class="row">
+                <div class="col" >
+                  NOW LOADING....
+                </div>
             </div>
-        </div>
 
-        <div *ngIf="navigation=='TDO_LIST'" class="row">
-          <div class="col">
-            <app-post-list [posts]="posts"></app-post-list>
-          </div>
-        </div>
-
-        <div *ngIf="navigation=='POS_FORM'" class="row">
-            <div class="col" >
-              <app-post-form (todoFormEvent)="recieveTodoFormEvent($event)"></app-post-form>
+            <div *ngIf="navigation=='POS_LIST'" class="row">
+              <div class="col">
+                <app-post-list [posts]="posts"></app-post-list>
+              </div>
             </div>
-        </div>
+
+            <div *ngIf="navigation=='POS_FORM'" class="row">
+                <div class="col" >
+                  <app-post-form (todoFormEvent)="recievePostFormEvent($event)"></app-post-form>
+                </div>
+            </div>
 
 
 
 
 
-        <div *ngIf="navigation=='TDO_REPORTS'" class="row">
-        </div>
+            <div *ngIf="navigation=='POS_REPORTS'" class="row">
+              post reports
+            </div>
 
-        <div *ngIf="navigation=='TDO_SUMMARY'" class="row">
-        </div>
+            <div *ngIf="navigation=='POS_SUMMARY'" class="row">
+              post summary
+            </div>
 
-        <div *ngIf="navigation=='TDO_TABLE'" class="row">
-        </div>
+            <div *ngIf="navigation=='POS_TABLE'" class="row">
+              post table
+            </div>
 
 
 
-    </div>
-</div>
+
+
+
+
+
+
+
+
+        </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+      </mat-tab-group>
+      </mat-grid-tile>
+
+</mat-grid-list>

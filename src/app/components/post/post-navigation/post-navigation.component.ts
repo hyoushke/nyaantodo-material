@@ -10,7 +10,7 @@ export class PostNavigationComponent implements OnInit {
   public message = '';
   public counter: number = 0;
 
-  @Output() navigationEvent = new EventEmitter<any>();
+  @Output() onEmitNavigationEvent = new EventEmitter<any>();
 
   constructor() { }
 
@@ -23,7 +23,7 @@ export class PostNavigationComponent implements OnInit {
                 counter: this.counter,
                 navigation: postNavigation };
     this.counter++;
-    this.navigationEvent.emit(data);
+    this.onEmitNavigationEvent.emit(data);
 
   }
 
