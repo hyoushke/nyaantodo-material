@@ -5,13 +5,20 @@
 
 
 
-<router-outlet></router-outlet>
 
 
 
-<mat-sidenav-container>
-  <mat-sidenav></mat-sidenav>
 
-  <mat-sidenav-content></mat-sidenav-content>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="log('*** open ****')" (closed)="log('**** closed ****')">Side Nav</mat-sidenav>
+
+  <mat-sidenav-content>
+      <strong>Main</strong>
+      <button (click)="opened=!opened">Toogle to Open</button>
+      <button (click)="sidenav.open()">Open Sidenav</button>
+      <button (click)="sidenav.close()">Close Sidenav</button>
+      <button (click)="sidenav.toggle()">Toggle</button>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
 
 </mat-sidenav-container>
