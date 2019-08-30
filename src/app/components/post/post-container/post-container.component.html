@@ -1,3 +1,952 @@
+<mat-tab-group style="width: 100%;">
+
+
+    <mat-tab label="aaa">
+        <mat-card class="card-demo">
+            <mat-card-title>Grid with Minmax</mat-card-title>
+            <mat-card-content class="containerX">
+              <div class="colorNested" style="height: auto;">
+                <div gdGap="10px" gdColumns="repeat(auto-fill, minmax(200px, 1fr))">
+                  <div class="box" gdColumn="auto / span 2">A</div>
+                  <div class="box">B</div>
+                  <div class="box">C</div>
+                  <div class="box">D</div>
+                  <div class="box">E</div>
+                  <div class="box">F</div>
+                  <div class="box" gdColumn="auto / span 2" gdRow="auto / span 2">G</div>
+                  <div class="box">H</div>
+                  <div class="box">I</div>
+                  <div class="box">J</div>
+                  <div class="box" gdColumn="auto / span 3">K</div>
+                  <div class="box">L</div>
+                  <div class="box">M</div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+    </mat-tab>
+    <mat-tab label="xxxxxxxxxx">
+        <mat-card class="card-demo">
+            <mat-card-title>Responsive Layout Directions</mat-card-title>
+            <mat-card-subtitle>Layout direction changes to 'column' for 'xs' or 'sm' viewport sizes:
+            </mat-card-subtitle>
+            <mat-card-content>
+              <div class="containerX">
+                <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex
+                     class="coloredContainerX box">
+                  <div fxFlex fxFlexFill> I'm above on mobile, and to the left on larger devices.</div>
+                  <div fxFlex fxFlexFill> xxxxxxxxxxxxxvices.</div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+    </mat-tab>
+
+    <mat-tab label="xxxxxxxxxx">
+        <mat-card class="card-demo">
+            <mat-card-title>Basic Responsive Grid App</mat-card-title>
+            <mat-card-content class="containerX">
+              <div class="colorNested box" style="height: auto;">
+                <div gdAreas.xs="header | sidebar | content | sidebar2 | footer" gdGap="1em"
+                     gdColumns.xs="none"
+                     gdAreas.sm="header header | sidebar content | sidebar2 sidebar2 | footer footer"
+                     gdColumns.sm="20%!"
+                     gdAreas.gt-sm="header header header | sidebar content sidebar2 | footer footer footer"
+                     gdColumns.gt-sm="120px auto 120px" gdGap.gt-sm="20px" [ngStyle]="{'max-width': 'auto'}"
+                     [ngStyle.gt-sm]="{'max-width': '600px'}">
+                  <div class="blocks one" gdArea="header">Header</div>
+                  <div class="blocks two" gdArea="sidebar">Sidebar</div>
+                  <div class="blocks three" gdArea="sidebar2">Sidebar 2</div>
+                  <div class="blocks four" gdArea="content">Content
+                    <br /> More content than we had before so this column is now quite tall.</div>
+                  <div class="blocks five" gdArea="footer">Footer</div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+    </mat-tab>
+
+    <mat-tab label="Grid Cards">
+
+
+
+
+
+        <div class="content"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxFlexFill style="min-height: 100%;" >
+
+       <div fxFlex="25" class="sec1" fxFlex.xs="55" style="min-height: 100%;">
+
+                <mat-nav-list>
+                  <a href="#" mat-list-item>Menu Item 1</a>
+                  <a href="#" mat-list-item>Menu Item 2</a>
+                  <a href="#" mat-list-item>Menu Item 3</a>
+                  <a href="#" mat-list-item>Menu Item 4</a>
+                  <a href="#" mat-list-item>Menu Item 5</a>
+                  <a href="#"mat-list-item>Menu Item 6</a>
+                </mat-nav-list>
+       </div>
+       <div fxFlex="75" class="sec3" fxFlex.xs="15">
+
+ <mat-grid-list cols="4" rowHeight="400px">
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-grid-tile-footer>
+          hello
+        </mat-grid-tile-footer>
+   </mat-grid-tile>
+
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+   <mat-grid-tile>
+      <mat-card class="example-card" style="width: 16rem;">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>test</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+                test
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Edit</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Set Enable</button>
+            <button mat-button>Set Color</button>
+          </mat-card-actions>
+        </mat-card>
+   </mat-grid-tile>
+
+ </mat-grid-list>
+
+       </div>
+
+        </div>
+
+
+
+
+
+    </mat-tab>
+    <mat-tab label="Second">
+
+        <app-demo-table>  </app-demo-table>
+    </mat-tab>
+    <mat-tab label="Third">
+        <div fxLayout='column' class="zero">
+
+            <div fxFlex="33" class="one" ></div>
+            <div fxFlex="33%" fxLayout="column" class="two">
+
+              <div fxFlex="22%"    class="two_one"></div>
+              <div fxFlex="205px"  class="two_two"></div>
+              <div fxFlex="30"     class="two_three"></div>
+
+            </div>
+            <div fxFlex class="three"></div>
+
+          </div>
+
+        <div fxLayout="row" fxLayoutGap="16px grid">
+
+        <mat-card class="example-card" style="width: 16rem;">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>test</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                  test
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>Edit</button>
+              <button mat-button>Remove</button>
+              <button mat-button>Set Enable</button>
+              <button mat-button>Set Color</button>
+            </mat-card-actions>
+          </mat-card>
+
+          <mat-card class="example-card" style="width: 16rem;">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>test</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                    test
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>Edit</button>
+                <button mat-button>Remove</button>
+                <button mat-button>Set Enable</button>
+                <button mat-button>Set Color</button>
+              </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="example-card" style="width: 16rem;">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>test</mat-card-title>
+                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                      test
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Edit</button>
+                  <button mat-button>Remove</button>
+                  <button mat-button>Set Enable</button>
+                  <button mat-button>Set Color</button>
+                </mat-card-actions>
+              </mat-card>
+
+              <mat-card class="example-card" style="width: 16rem;">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>test</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                  <mat-card-content>
+                    <p>
+                        test
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button>Edit</button>
+                    <button mat-button>Remove</button>
+                    <button mat-button>Set Enable</button>
+                    <button mat-button>Set Color</button>
+                  </mat-card-actions>
+                </mat-card>
+
+                <mat-card class="example-card" style="width: 16rem;">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>test</mat-card-title>
+                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                      <p>
+                          test
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>Edit</button>
+                      <button mat-button>Remove</button>
+                      <button mat-button>Set Enable</button>
+                      <button mat-button>Set Color</button>
+                    </mat-card-actions>
+                  </mat-card>
+
+
+                  <mat-card class="example-card" style="width: 16rem;">
+                      <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>test</mat-card-title>
+                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                      </mat-card-header>
+                      <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                      <mat-card-content>
+                        <p>
+                            test
+                        </p>
+                      </mat-card-content>
+                      <mat-card-actions>
+                        <button mat-button>Edit</button>
+                        <button mat-button>Remove</button>
+                        <button mat-button>Set Enable</button>
+                        <button mat-button>Set Color</button>
+                      </mat-card-actions>
+                    </mat-card>
+
+                    <mat-card class="example-card" style="width: 16rem;">
+                        <mat-card-header>
+                          <div mat-card-avatar class="example-header-image"></div>
+                          <mat-card-title>test</mat-card-title>
+                          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                          <p>
+                              test
+                          </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                          <button mat-button>Edit</button>
+                          <button mat-button>Remove</button>
+                          <button mat-button>Set Enable</button>
+                          <button mat-button>Set Color</button>
+                        </mat-card-actions>
+                      </mat-card>
+
+
+                      <mat-card class="example-card" style="width: 16rem;">
+                          <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>test</mat-card-title>
+                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                          </mat-card-header>
+                          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                          <mat-card-content>
+                            <p>
+                                test
+                            </p>
+                          </mat-card-content>
+                          <mat-card-actions>
+                            <button mat-button>Edit</button>
+                            <button mat-button>Remove</button>
+                            <button mat-button>Set Enable</button>
+                            <button mat-button>Set Color</button>
+                          </mat-card-actions>
+                        </mat-card>
+
+                        <mat-card class="example-card" style="width: 16rem;">
+                            <mat-card-header>
+                              <div mat-card-avatar class="example-header-image"></div>
+                              <mat-card-title>test</mat-card-title>
+                              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                            </mat-card-header>
+                            <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                            <mat-card-content>
+                              <p>
+                                  test
+                              </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                              <button mat-button>Edit</button>
+                              <button mat-button>Remove</button>
+                              <button mat-button>Set Enable</button>
+                              <button mat-button>Set Color</button>
+                            </mat-card-actions>
+                          </mat-card>
+
+
+                          <mat-card class="example-card" style="width: 16rem;">
+                              <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>test</mat-card-title>
+                                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                              </mat-card-header>
+                              <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                              <mat-card-content>
+                                <p>
+                                    test
+                                </p>
+                              </mat-card-content>
+                              <mat-card-actions>
+                                <button mat-button>Edit</button>
+                                <button mat-button>Remove</button>
+                                <button mat-button>Set Enable</button>
+                                <button mat-button>Set Color</button>
+                              </mat-card-actions>
+                            </mat-card>
+
+                            <mat-card class="example-card" style="width: 16rem;">
+                                <mat-card-header>
+                                  <div mat-card-avatar class="example-header-image"></div>
+                                  <mat-card-title>test</mat-card-title>
+                                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                </mat-card-header>
+                                <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                <mat-card-content>
+                                  <p>
+                                      test
+                                  </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                  <button mat-button>Edit</button>
+                                  <button mat-button>Remove</button>
+                                  <button mat-button>Set Enable</button>
+                                  <button mat-button>Set Color</button>
+                                </mat-card-actions>
+                              </mat-card>
+
+                              <mat-card class="example-card" style="width: 16rem;">
+                                  <mat-card-header>
+                                    <div mat-card-avatar class="example-header-image"></div>
+                                    <mat-card-title>test</mat-card-title>
+                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                  </mat-card-header>
+                                  <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                  <mat-card-content>
+                                    <p>
+                                        test
+                                    </p>
+                                  </mat-card-content>
+                                  <mat-card-actions>
+                                    <button mat-button>Edit</button>
+                                    <button mat-button>Remove</button>
+                                    <button mat-button>Set Enable</button>
+                                    <button mat-button>Set Color</button>
+                                  </mat-card-actions>
+                                </mat-card>
+
+                                <mat-card class="example-card" style="width: 16rem;">
+                                    <mat-card-header>
+                                      <div mat-card-avatar class="example-header-image"></div>
+                                      <mat-card-title>test</mat-card-title>
+                                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    </mat-card-header>
+                                    <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                    <mat-card-content>
+                                      <p>
+                                          test
+                                      </p>
+                                    </mat-card-content>
+                                    <mat-card-actions>
+                                      <button mat-button>Edit</button>
+                                      <button mat-button>Remove</button>
+                                      <button mat-button>Set Enable</button>
+                                      <button mat-button>Set Color</button>
+                                    </mat-card-actions>
+                                  </mat-card>
+
+                                  <mat-card class="example-card" style="width: 16rem;">
+                                      <mat-card-header>
+                                        <div mat-card-avatar class="example-header-image"></div>
+                                        <mat-card-title>test</mat-card-title>
+                                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                      </mat-card-header>
+                                      <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                      <mat-card-content>
+                                        <p>
+                                            test
+                                        </p>
+                                      </mat-card-content>
+                                      <mat-card-actions>
+                                        <button mat-button>Edit</button>
+                                        <button mat-button>Remove</button>
+                                        <button mat-button>Set Enable</button>
+                                        <button mat-button>Set Color</button>
+                                      </mat-card-actions>
+                                    </mat-card>
+
+                                    <mat-card class="example-card" style="width: 16rem;">
+                                        <mat-card-header>
+                                          <div mat-card-avatar class="example-header-image"></div>
+                                          <mat-card-title>test</mat-card-title>
+                                          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                        </mat-card-header>
+                                        <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                        <mat-card-content>
+                                          <p>
+                                              test
+                                          </p>
+                                        </mat-card-content>
+                                        <mat-card-actions>
+                                          <button mat-button>Edit</button>
+                                          <button mat-button>Remove</button>
+                                          <button mat-button>Set Enable</button>
+                                          <button mat-button>Set Color</button>
+                                        </mat-card-actions>
+                                      </mat-card>
+
+                                      <mat-card class="example-card" style="width: 16rem;">
+                                          <mat-card-header>
+                                            <div mat-card-avatar class="example-header-image"></div>
+                                            <mat-card-title>test</mat-card-title>
+                                            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                          </mat-card-header>
+                                          <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                          <mat-card-content>
+                                            <p>
+                                                test
+                                            </p>
+                                          </mat-card-content>
+                                          <mat-card-actions>
+                                            <button mat-button>Edit</button>
+                                            <button mat-button>Remove</button>
+                                            <button mat-button>Set Enable</button>
+                                            <button mat-button>Set Color</button>
+                                          </mat-card-actions>
+                                        </mat-card>
+
+
+                                        <mat-card class="example-card" style="width: 16rem;">
+                                            <mat-card-header>
+                                              <div mat-card-avatar class="example-header-image"></div>
+                                              <mat-card-title>test</mat-card-title>
+                                              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                            </mat-card-header>
+                                            <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                            <mat-card-content>
+                                              <p>
+                                                  test
+                                              </p>
+                                            </mat-card-content>
+                                            <mat-card-actions>
+                                              <button mat-button>Edit</button>
+                                              <button mat-button>Remove</button>
+                                              <button mat-button>Set Enable</button>
+                                              <button mat-button>Set Color</button>
+                                            </mat-card-actions>
+                                          </mat-card>
+
+                                          <mat-card class="example-card" style="width: 16rem;">
+                                              <mat-card-header>
+                                                <div mat-card-avatar class="example-header-image"></div>
+                                                <mat-card-title>test</mat-card-title>
+                                                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                              </mat-card-header>
+                                              <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                              <mat-card-content>
+                                                <p>
+                                                    test
+                                                </p>
+                                              </mat-card-content>
+                                              <mat-card-actions>
+                                                <button mat-button>Edit</button>
+                                                <button mat-button>Remove</button>
+                                                <button mat-button>Set Enable</button>
+                                                <button mat-button>Set Color</button>
+                                              </mat-card-actions>
+                                            </mat-card>
+
+                                            <mat-card class="example-card" style="width: 16rem;">
+                                                <mat-card-header>
+                                                  <div mat-card-avatar class="example-header-image"></div>
+                                                  <mat-card-title>test</mat-card-title>
+                                                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                                </mat-card-header>
+                                                <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                                <mat-card-content>
+                                                  <p>
+                                                      test
+                                                  </p>
+                                                </mat-card-content>
+                                                <mat-card-actions>
+                                                  <button mat-button>Edit</button>
+                                                  <button mat-button>Remove</button>
+                                                  <button mat-button>Set Enable</button>
+                                                  <button mat-button>Set Color</button>
+                                                </mat-card-actions>
+                                              </mat-card>
+
+                                              <mat-card class="example-card" style="width: 16rem;">
+                                                  <mat-card-header>
+                                                    <div mat-card-avatar class="example-header-image"></div>
+                                                    <mat-card-title>test</mat-card-title>
+                                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                                  </mat-card-header>
+                                                  <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                                  <mat-card-content>
+                                                    <p>
+                                                        test
+                                                    </p>
+                                                  </mat-card-content>
+                                                  <mat-card-actions>
+                                                    <button mat-button>Edit</button>
+                                                    <button mat-button>Remove</button>
+                                                    <button mat-button>Set Enable</button>
+                                                    <button mat-button>Set Color</button>
+                                                  </mat-card-actions>
+                                                </mat-card>
+
+                                                <mat-card class="example-card" style="width: 16rem;">
+                                                    <mat-card-header>
+                                                      <div mat-card-avatar class="example-header-image"></div>
+                                                      <mat-card-title>test</mat-card-title>
+                                                      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                                    </mat-card-header>
+                                                    <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                                    <mat-card-content>
+                                                      <p>
+                                                          test
+                                                      </p>
+                                                    </mat-card-content>
+                                                    <mat-card-actions>
+                                                      <button mat-button>Edit</button>
+                                                      <button mat-button>Remove</button>
+                                                      <button mat-button>Set Enable</button>
+                                                      <button mat-button>Set Color</button>
+                                                    </mat-card-actions>
+                                                  </mat-card>
+                                                  <mat-card class="example-card" style="width: 16rem;">
+                                                      <mat-card-header>
+                                                        <div mat-card-avatar class="example-header-image"></div>
+                                                        <mat-card-title>test</mat-card-title>
+                                                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                                      </mat-card-header>
+                                                      <img mat-card-image src="http://localhost:8080/uploads/post-1558910809401.jpg" alt="Photo of a Shiba Inu">
+                                                      <mat-card-content>
+                                                        <p>
+                                                            test
+                                                        </p>
+                                                      </mat-card-content>
+                                                      <mat-card-actions>
+                                                        <button mat-button>Edit</button>
+                                                        <button mat-button>Remove</button>
+                                                        <button mat-button>Set Enable</button>
+                                                        <button mat-button>Set Color</button>
+                                                      </mat-card-actions>
+                                                    </mat-card>
+
+
+      </div>
+
+    </mat-tab>
+  </mat-tab-group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div fxFlex>
 <mat-grid-list cols="12">
     <mat-grid-tile colspan="12">
